@@ -1,0 +1,718 @@
+[
+  {
+    "path": "/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/about/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/contact/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/gallery/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/case-studies/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/services/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/case-studies/bare-ranch/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/case-studies/providence-estates/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/case-studies/bill-skeen-residence/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/case-studies/spence-lane-liberty-hill/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/services/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/services/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/landscaping/",
+    "status": "review-draft"
+  },
+  {
+    "path": "/austin/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/austin/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-antonio/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/new-braunfels/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/san-marcos/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/lakeway/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/spicewood/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/cedar-park/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/georgetown/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/round-rock/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/bee-cave/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/dripping-springs/land-clearing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/landscaping/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/french-drain/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/lawn-care/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/fencing/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/composite-decking/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/tree-trimming/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/sprinkler-system-repair/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/artificial-turf/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/masonry/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/tree-services/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/sod-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/sprinkler-system-installation/",
+    "status": "content-required"
+  },
+  {
+    "path": "/johnson-city/land-clearing/",
+    "status": "content-required"
+  }
+]
