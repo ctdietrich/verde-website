@@ -3,3 +3,5 @@
 @media(max-width:520px){.grid,.gallery,.service-grid{grid-template-columns:1fr}.header nav{gap:10px}.header nav .button{display:none}.hero figure img{height:330px}.card img{height:300px}.service h3{margin-top:20px}.service-list{columns:1}.gallery img{height:auto}.banner{height:290px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .banner img{width:100%;height:100%;object-fit:cover}.contact-panel a{overflow-wrap:anywhere}
+/* Unframed editorial photos retain their intrinsic proportions as columns resize. */
+.split img{width:100%;height:auto}
