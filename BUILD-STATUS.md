@@ -1,24 +1,15 @@
-# Verde build status
+# Verde build status — September 16, 2026
 
-## Implemented in the first review draft
+63 review pages built: ten core pages, thirteen general service pages, 39 researched local pages for Lakeway, Bee Cave and Round Rock, plus the existing Austin landscaping structural draft. Approved scope remains 179 pages. Remaining 116 routes are not built; Austin also needs researched local content.
 
-- Eleven static HTML pages: homepage, four case studies, case-study index, gallery, services, about, contact, and Austin landscaping example.
-- Original Verde logo and twelve selected project photographs, each in two WebP sizes with metadata removed.
-- Shared green/cream design, responsive CSS, keyboard focus states, and reduced-motion support.
-- Dependency-free Node build and preview server. Run `npm run build`, `npm test`, then `npm start`.
-- A 179-route content plan in `planning/page-plan.json`. Status describes draft implementation, not publication or SEO approval.
-- Every preview page is noindex. No production sitemap or canonical URLs are emitted yet.
+All pages remain noindex. Local pages contain municipal references and service-specific planning guidance. These are staging drafts, not SEO approval or guaranteed rankings.
 
-## Remaining before launch
+Reviewed 118 images across the case-study folders, finished-work subfolders and general gallery. Selected a separate Grove at Northwest Hills putting-green angle for the homepage hero. Before/during-only subfolders at Bare Ranch and Providence remain outside this hero review.
 
-- Final visual QA on desktop and mobile; browser review was interrupted in this session.
-- Review photograph selection across the full supplied collections; the first set is a curated subset, not a review of every image.
-- Improve the Skeen gallery with stronger full-walkway images and select before/during images where they substantiate the case studies.
-- Write 13 general service pages and the remaining 155 service/city pages. The Austin example is structural draft copy and still needs verified local substance before SEO approval.
-- Confirm Providence Estates location and responsibility for retaining-wall work before making those claims; they are deliberately omitted from current copy.
-- Replace generic gallery alt text with individual image descriptions where needed. Finalize exact intrinsic image dimensions and contextual sizes.
-- Implement and verify the inquiry form, delivery, spam controls, and privacy notice. Current contact page uses phone and email links only.
-- Production metadata, canonical URLs, validated structured data, sitemap, analytics/Search Console setup, current-site redirect map, and measured performance checks.
-- Hostinger staging deployment, acceptance review, and a separately authorized domain cutover.
+Fixed the About-photo distortion with responsive width and automatic height. User-requested project naming and Providence San Antonio location are retained.
 
-No existing site or domain has been changed. No hosting plan has been purchased. The source is a draft, not a finished 179-page website.
+Build and internal-link, asset, heading and preview-indexing checks pass. Desktop/mobile visual review remains outstanding; performance has not been measured.
+
+Hostinger is connected to GitHub main for automatic staging deployments. Deployment completion must be verified separately. Production domain cutover is not authorized.
+
+Remaining: 116 local routes and Austin research, final photo and alt-text review, inquiry form and delivery/spam/privacy checks, production metadata and sitemap, redirects, analytics/Search Console, performance and responsive QA, launch approval.

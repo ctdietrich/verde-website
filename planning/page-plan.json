@@ -41,55 +41,55 @@
   },
   {
     "path": "/services/landscaping/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/french-drain/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/lawn-care/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/fencing/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/composite-decking/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/tree-trimming/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/sprinkler-system-repair/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/artificial-turf/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/masonry/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/tree-services/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/sod-installation/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/sprinkler-system-installation/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/services/land-clearing/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/austin/landscaping/",
@@ -301,55 +301,55 @@
   },
   {
     "path": "/lakeway/landscaping/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/french-drain/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/lawn-care/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/fencing/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/composite-decking/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/tree-trimming/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/sprinkler-system-repair/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/artificial-turf/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/masonry/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/tree-services/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/sod-installation/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/sprinkler-system-installation/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/lakeway/land-clearing/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/spicewood/landscaping/",
@@ -509,107 +509,107 @@
   },
   {
     "path": "/round-rock/landscaping/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/french-drain/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/lawn-care/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/fencing/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/composite-decking/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/tree-trimming/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/sprinkler-system-repair/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/artificial-turf/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/masonry/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/tree-services/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/sod-installation/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/sprinkler-system-installation/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/round-rock/land-clearing/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/landscaping/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/french-drain/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/lawn-care/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/fencing/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/composite-decking/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/tree-trimming/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/sprinkler-system-repair/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/artificial-turf/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/masonry/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/tree-services/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/sod-installation/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/sprinkler-system-installation/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/bee-cave/land-clearing/",
-    "status": "content-required"
+    "status": "review-draft"
   },
   {
     "path": "/dripping-springs/landscaping/",
