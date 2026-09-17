@@ -5,3 +5,4 @@
 .banner img{width:100%;height:100%;object-fit:cover}.contact-panel a{overflow-wrap:anywhere}
 /* Unframed editorial photos retain their intrinsic proportions as columns resize. */
 .split img{width:100%;height:auto}
+.commercial-gallery{margin-top:40px;align-items:start}.commercial-gallery img{height:auto;aspect-ratio:auto}.commercial-gallery figcaption h2{font-size:30px;margin:12px 0 8px}.commercial-gallery figcaption p{font-size:14px}.commercial-gallery{row-gap:48px}

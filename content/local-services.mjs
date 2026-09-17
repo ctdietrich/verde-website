@@ -1,7 +1,9 @@
 // Original project-planning guidance informed by the linked municipal sources.
 // These are service-area pages, not claims of a local office or completed local work.
 import {additionalGuides} from './austin-san-antonio.mjs';
+import {newLocalGuides} from './cedar-park-new-braunfels.mjs';
 export const localGuides = [
+  ...newLocalGuides,
   ...additionalGuides,
   {
     city: 'Lakeway',
