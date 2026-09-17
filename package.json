@@ -1,1 +1,1 @@
-{"name":"verde-website","version":"0.1.0","private":true,"type":"module","engines":{"node":">=20"},"scripts":{"build":"node scripts/build.mjs","start":"node scripts/server.mjs","test":"node scripts/check.mjs"}}
+{"name":"verde-website","version":"0.1.0","private":true,"type":"module","engines":{"node":">=20"},"scripts":{"build":"node scripts/build.mjs && node scripts/check.mjs","start":"node scripts/server.mjs","test":"node scripts/check.mjs"}}
