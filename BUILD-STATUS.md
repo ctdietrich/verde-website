@@ -10,10 +10,10 @@ Added a city/service directory linking all currently built local guides, accurat
 
 Production canonical URLs and sitemap generation are prepared but disabled. SITE_MODE=production additionally requires APPROVE_INDEXING=true and a complete 179-page build. These settings must not be enabled before content review and explicit launch approval. Preview robots and response headers remain noindex.
 
-Server checks pass for gzip compression, GET/HEAD, directory redirects, missing pages, internal-file protection, allowed methods and noindex response headers. Build checks pass for all 114 pages and 25 referenced images, internal links/assets, unique metadata/local paragraphs, JSON-LD and staging configuration. These checks do not substitute for visual QA or a measured Core Web Vitals audit.
+Server checks pass for gzip compression, GET/HEAD, directory redirects, missing pages, internal-file protection, allowed methods and noindex response headers. Build checks pass for all 114 pages and 29 referenced images, internal links/assets, unique metadata/local paragraphs, JSON-LD and staging configuration. These checks do not substitute for visual QA or a measured Core Web Vitals audit.
 
 Hostinger's temporary-domain rewriting changed email links incorrectly. Contact email domains are now HTML-encoded so browsers retain the correct Verde address without preview substitution.
 
 Remaining: 65 local service pages; final desktop/mobile visual review and measured performance; contact delivery verification; source/SEO editorial review; old-site URL redirect mapping; analytics/Search Console if desired; explicit production launch approval. No existing live site or DNS settings have been changed.
 
-Commercial Gallery is now in the main navigation beside Our Work and linked from the case-study hub. The published collection currently features Grove at Northwest Hills and SoNA dog park. Palmera and SoNA landscape-refresh selections are prepared locally, pending explicit approval to upload those Drive images into GitHub.
+Commercial Gallery is now in the main navigation beside Our Work and linked from the case-study hub. Four curated views cover Palmera Apartments, Grove at Northwest Hills, SoNA dog park, and SoNA landscape refresh. New photos were sourced from the owner’s shared commercial collection; natural image proportions are preserved.
