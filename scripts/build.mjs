@@ -1,4 +1,5 @@
 import {mkdir,writeFile,cp,rm,readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
 import {cities,services,slug,projects} from '../content/site.mjs';
 import {renderServices} from './service-pages.mjs';
 import {production,metadata,sitemap,siteOrigin} from './seo.mjs';
@@ -30,6 +31,8 @@ if(production) await writeFile(new URL('sitemap.xml',out),sitemap(pages));
 await writeFile(new URL('build-config.json',out),JSON.stringify({production}));
 await writeFile(new URL('404.html',out),'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found | Verde</title><link rel="stylesheet" href="/styles.css"><main class="wrap not-found"><h1>That page isn’t here.</h1><a href="/">Return to Verde</a></main></html>');
 await writeFile(new URL('routes.json',out),JSON.stringify(pages,null,2));
+const contentFingerprint=createHash('sha256').update(JSON.stringify({localGuides,projects,commercialGallery})).digest('hex').slice(0,16);
+await writeFile(new URL('build-info.json',out),JSON.stringify({release:'2026-09-18-local-guides',pageCount:pages.length,contentFingerprint,mode:production?'production':'preview'},null,2));
 const plan=[...['/','/about/','/contact/','/gallery/','/case-studies/','/services/',...projects.map(p=>`/case-studies/${p.slug}/`)],...services.map(s=>`/services/${slug(s)}/`),...cities.flatMap(c=>services.map(s=>`/${slug(c)}/${slug(s)}/`))];
 await mkdir(new URL('../planning/',import.meta.url),{recursive:true});await writeFile(new URL('../planning/page-plan.json',import.meta.url),JSON.stringify(plan.map(path=>({path,status:pages.some(p=>p.path===path)?'review-draft':'content-required'})),null,2));
 console.log(`Built ${pages.length} review pages; ${plan.length} planned pages. Indexing ${production?'enabled':'disabled'}.`);

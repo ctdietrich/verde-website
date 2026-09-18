@@ -1,11 +1,16 @@
 import {readFile,stat} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {localGuides} from '../content/local-services.mjs';
-import {services} from '../content/site.mjs';
+import {services,cities,slug} from '../content/site.mjs';
 const config=JSON.parse(await readFile('dist/build-config.json'));
 const plan=JSON.parse(await readFile('planning/page-plan.json'));
 assert.equal(plan.length,179); assert.equal(new Set(plan.map(p=>p.path)).size,179);
 const routes=JSON.parse(await readFile('dist/routes.json'));
+assert.equal(routes.length,179,'All approved pages must be built');
+assert.deepEqual(new Set(localGuides.map(g=>g.city)),new Set(cities),'Every approved city needs its own guide');
+for(const city of cities)for(const service of services)assert(routes.some(r=>r.path===`/${slug(city)}/${slug(service)}/`),`Missing ${service} in ${city}`);
+const buildInfo=JSON.parse(await readFile('dist/build-info.json'));
+assert.equal(buildInfo.pageCount,routes.length);
 assert.equal(new Set(routes.map(r=>r.path)).size,routes.length);
 const imagePaths=new Set(), titles=new Set(), descriptions=new Set(), paragraphs=new Set();
 for(const guide of localGuides) for(const service of services){

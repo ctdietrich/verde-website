@@ -2,7 +2,13 @@
 // These are service-area pages, not claims of a local office or completed local work.
 import {additionalGuides} from './austin-san-antonio.mjs';
 import {newLocalGuides} from './cedar-park-new-braunfels.mjs';
+import {eastLocalGuides} from './san-marcos-georgetown.mjs';
+import {westLocalGuides} from './dripping-springs-johnson-city.mjs';
+import {spicewoodGuide} from './spicewood.mjs';
 export const localGuides = [
+  ...eastLocalGuides,
+  ...westLocalGuides,
+  spicewoodGuide,
   ...newLocalGuides,
   ...additionalGuides,
   {
