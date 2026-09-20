@@ -1,7 +1,7 @@
 // Curated photographs from the owner's commercial project collection.
 export const commercialGallery = [
-  {name:'Palmera Apartments', image:17, caption:'Palms beside the pool courtyard at Palmera Apartments.', source:'1aJNtwRgDzuLNJm2myTpfeLd7NNpI8LX-'},
+  {name:'Palmera Apartments', image:20, caption:'A wider view of the palm-lined pool courtyard and rock planting beds at Palmera Apartments.', source:'1oQbHsEW19Uuk_oK5ZtKRqCcv76I-RJwU'},
   {name:'Grove at Northwest Hills', image:12, caption:'Putting green and outdoor recreation space at Grove at Northwest Hills.'},
   {name:'SoNA Apartments · Dog park', image:13, caption:'A dedicated outdoor dog park at SoNA Apartments.'},
-  {name:'SoNA Apartments · Landscape refresh', image:18, caption:'Refreshed rock beds and planting beside a shaded walkway at SoNA Apartments.', source:'1vN6vrzdK0GGCzwbNMNyLp00sy0G55xsL'}
+  {name:'SoNA Apartments · Landscape refresh', image:19, caption:'Gravel gathering area, stone benches and rock beds at SoNA Apartments.', source:'1WkB5UZpPYwByT4ntFm7eROSiL4z1-m8I'}
 ];

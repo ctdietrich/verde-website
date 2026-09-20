@@ -1,7 +1,11 @@
 import {readFile,stat} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {localGuides} from '../content/local-services.mjs';
-import {services,cities,slug} from '../content/site.mjs';
+import {services,cities,slug,projects} from '../content/site.mjs';
+for(const p of projects){
+  assert(!p.gallery.includes(p.image),`${p.name}: hero repeated in gallery`);
+  assert.equal(new Set(p.gallery).size,p.gallery.length,`${p.name}: repeated gallery photo`);
+}
 const config=JSON.parse(await readFile('dist/build-config.json'));
 const plan=JSON.parse(await readFile('planning/page-plan.json'));
 assert.equal(plan.length,179); assert.equal(new Set(plan.map(p=>p.path)).size,179);
