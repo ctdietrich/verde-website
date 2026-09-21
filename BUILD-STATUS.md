@@ -1,21 +1,19 @@
-# Verde build status — September 18, 2026
+# Verde build status — September 21, 2026
 
-179 review pages built: ten core pages, thirteen general service pages, and all 156 service/city drafts across the approved twelve locations. This batch adds 65 original local drafts for San Marcos, Georgetown, Spicewood, Dripping Springs and Johnson City. Each combines service-specific planning advice with a linked municipal, utility or regional reference. A complete route count is not a claim that editorial review or launch is complete.
+179 review pages are built: ten core pages, thirteen service pages and 156 city/service pages. Preview indexing remains disabled. The Squarespace site and DNS have not been changed.
 
-The homepage hero now uses the Providence Estates boulder-and-walkway photo (project 9). Providence’s portfolio cover uses the alternate oak-canopy photo (project 5). The damaged, unused Grove 1600px asset remains excluded from all pages.
+## Gallery and editorial review
 
-The About page uses a wide Providence Estates oak-canopy image at its natural proportions. Requested project names and the Providence San Antonio location remain in place.
+All four case-study galleries and the commercial gallery use uniform 4:3 image frames with proportional cropping. Each image links to the full, uncropped source in a new tab. Project cards also use a consistent 4:3 frame. Case-study hero images retain their native proportions. Portrait crop positions were reviewed on a contact sheet, with individual adjustments for people, entrances, trees and the pool courtyard.
 
-Added a city/service directory linking all currently built local guides, accurate responsive-image width descriptors, preview-safe contact email encoding, social metadata and Organization/WebSite/WebPage/Service structured data. No local offices or reviews are invented.
+Corrected the commercial turf photo caption, which had called a visible recreation surface a dog park. Simplified selected case-study wording. General service pages now name the service and Central Texas in their title and H1, with editorial taglines separate. City pages introduce the specific service rather than a generic construction sentence. Descriptions are shorter and relevant service pages link to genuine project examples.
 
-Production canonical URLs and sitemap generation are prepared but disabled. SITE_MODE=production additionally requires APPROVE_INDEXING=true and a complete 179-page build. These settings must not be enabled before content review and explicit launch approval. Preview robots and response headers remain noindex.
+Shared layout refinements include consistent caption spacing, more restrained case-study subheads, mobile contact navigation, current-section navigation markers, appropriate heading levels on portfolio cards, and full-width image sizing hints for case-study heroes. Preferred timeline remains aligned with Project type, without the optional label.
 
-Server checks pass for gzip compression, GET/HEAD, directory redirects, missing pages, internal-file protection, allowed methods and noindex response headers. Build checks pass for all 179 pages and 29 referenced images, internal links/assets, unique metadata/local paragraphs, JSON-LD and staging configuration. These checks do not substitute for visual QA or a measured Core Web Vitals audit.
+## Verification and limits
 
-Hostinger's temporary-domain rewriting changed email links incorrectly. Contact email domains are now HTML-encoded so browsers retain the correct Verde address without preview substitution.
+Build checks pass for all 179 pages and 65 referenced image files: local links, unique metadata and local paragraphs, JSON-LD, image integrity and preview noindex configuration. These are build checks, not a measured Core Web Vitals score. Crop contact-sheet review is complete; browser verification of this new deployed build is not yet complete. Browser access to the deployment diagnostic was blocked during this pass.
 
-Remaining: Hostinger deployment synchronization; final desktop/mobile visual review and measured performance; contact delivery verification; source/SEO editorial review; old-site URL redirect mapping; analytics/Search Console if desired; explicit production launch approval. No existing live site or DNS settings have been changed.
+GitHub main is the Hostinger source. Publication to the temporary preview depends on Hostinger deploying the latest commit; confirm its build-info.json release is 2026-09-21-gallery-editorial-review. Do not claim the public deployment is current until verified.
 
-Commercial Gallery is now in the main navigation beside Our Work and linked from the case-study hub. Four curated views cover Palmera Apartments, Grove at Northwest Hills, SoNA dog park, and SoNA landscape refresh. New photos were sourced from the owner’s shared commercial collection; natural image proportions are preserved.
-
-Deployment diagnostic: /build-info.json identifies the content fingerprint, mode and page count without exposing credentials. The latest public check before this batch still showed an older homepage and a missing Cedar Park route. No Hostinger redeploy or DNS operation has been performed. Hosting connector registration requires a session restart before deployment logs can be inspected.
+Remaining launch gates: contact form activation and delivery verification; final rendered desktop/mobile review; measured performance; current local-source/regulatory verification before indexing; old-site redirect mapping; explicit production launch approval. Contact form setup is documented in planning/contact-form-setup.md.
