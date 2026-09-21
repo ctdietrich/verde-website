@@ -25,6 +25,8 @@ for(const guide of localGuides) for(const service of services){
 for(const {path} of routes){
   const html=await readFile('dist'+path+'index.html','utf8');
   assert.equal((html.match(/<h1>/g)||[]).length,1,path);
+  assert.match(html, /class="call-bar"[\s\S]*?href="tel:\+17373009848"/, `${path}: missing top click-to-call link`);
+  if(path==='/contact/') {assert(!html.includes('Good work starts')); assert.match(html,/class="contact-phone" href="tel:\+17373009848"/);}
   assert.match(html,config.production?/content="index,follow"/:/noindex,nofollow/);
   const title=html.match(/<title>(.*?)<\/title>/)[1]; assert(!titles.has(title)); titles.add(title);
   const description=html.match(/<meta name="description" content="([^"]+)"/)[1]; assert(!descriptions.has(description)); descriptions.add(description);
