@@ -12,4 +12,24 @@ img{height:auto}
 .banner img{width:100%;height:auto;object-fit:contain}
 .story .gallery{align-items:start;row-gap:40px}
 .story .gallery img{height:auto;object-fit:contain}
+.inquiry-form ::placeholder{color:#526653;opacity:1}
+/* Shared alignment and responsive spacing across every page template. */
+.hero,.grid,.split,.gallery,.service-grid,.facts,.about-expertise,.contact-layout,.form-pair{min-width:0}
+.hero>*,.grid>*,.split>*,.gallery>*,.service-grid>*,.facts>*,.about-expertise>*,.contact-layout>*,.form-pair>*{min-width:0}
+h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
+.brand{flex-shrink:0}.header nav a{white-space:nowrap}
+.button{line-height:1.4;text-align:center}.closing .button{flex-shrink:0}
+.card .label{align-items:flex-start}.card .label>span{flex-shrink:0;line-height:1.1;font-size:27px}.card h3{line-height:1.15}
+.contact-panel .button{font-size:14px}.contact-panel>p:last-child{margin-bottom:0}
+.contact-details{padding-top:36px}.inquiry-form label{line-height:1.5}
+.form-pair{align-items:end}.inquiry-form input,.inquiry-form select{height:50px;min-height:50px}
+.service-page h1{max-width:1050px}.service-page h2{font-size:clamp(30px,3.2vw,44px);line-height:1.15}
+.service-page .section{padding:64px 0}.service-page>.split:not(.section){margin-bottom:48px}
+.service-page>h2{margin-top:42px;margin-bottom:20px}.service-page ul{padding-left:22px}.service-page li{margin-bottom:10px}
+.breadcrumb{overflow-wrap:anywhere;line-height:1.7}.service-page details summary{line-height:1.5}
+.footer{border-top:1px solid #133d2529}.footer a{overflow-wrap:anywhere}
+@media(min-width:801px){.service{display:flex;flex-direction:column}.service h3{min-height:3.3em}.service>a{margin-top:auto}}
+@media(max-width:1000px) and (min-width:801px){.header{gap:20px}.header nav{gap:18px}.hero h1{font-size:clamp(42px,5.3vw,58px)}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.contact-details{padding-top:0}.service-page .section{padding:44px 0}.hero h1{font-size:clamp(39px,7.5vw,58px)}.section-top>a{align-self:flex-start}}
+@media(max-width:600px){.header{flex-direction:column;align-items:flex-start;gap:18px}.header nav{width:100%;justify-content:flex-start;gap:8px 20px}.header nav>a{padding:7px 0}.header nav .button{display:none}.grid,.gallery{grid-template-columns:1fr}.proof{gap:14px}.proof span{flex:1 1 120px}.footer .wrap{flex-direction:column;gap:22px}.section{padding:54px 0}.story{padding:42px 0}.story h2{font-size:31px}.page-title h2{font-size:30px}.contact-heading h1{font-size:42px}.closing{padding:52px 0}.closing h2{font-size:36px}}
 .commercial-gallery{margin-top:40px;align-items:start}.commercial-gallery img{height:auto;aspect-ratio:auto}.commercial-gallery figcaption h2{font-size:30px;margin:12px 0 8px}.commercial-gallery figcaption p{font-size:14px}.commercial-gallery{row-gap:48px}
