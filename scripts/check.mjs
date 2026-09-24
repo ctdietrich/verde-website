@@ -26,7 +26,25 @@ for(const {path} of routes){
   const html=await readFile('dist'+path+'index.html','utf8');
   assert.equal((html.match(/<h1>/g)||[]).length,1,path);
   assert.match(html, /class="call-bar"[\s\S]*?href="tel:\+17373009848"/, `${path}: missing top click-to-call link`);
-  if(path==='/contact/') {assert(!html.includes('Good work starts')); assert.match(html,/class="contact-phone" href="tel:\+17373009848"/);}
+  if(path==='/contact/') {
+    assert(!html.includes('Good work starts'));
+    assert.match(html,/class="contact-phone" href="tel:\\+17373009848"/);
+    const form=html.match(/<form\\b[\\s\\S]*?<\\/form>/)?.[0];
+    assert(form,'Contact form must render');
+    assert.equal((form.match(/\\srequired(?=\\s|>)/g)||[]).length,3,'Only name, email, and phone should be required');
+    for(const field of ['Name','email','Phone']) assert(form.includes('name="'+field+'"'), 'Missing contact field: '+field);
+    assert(!form.includes('name="Property address"'),'Property address must not block a lead');
+    assert(!form.includes('name="ZIP code"'),'ZIP code must not block a lead');
+    assert(form.includes('https://formsubmit.co/hello&#64;verdelandscapes&#46;com'),'FormSubmit delivery must remain intact');
+  }
+  if(path==='/about/') {
+    assert.match(html,/class="about-team-photo"/,'About page must show real crew');
+    assert.match(html,/data-photo-id="21"/,'About page must show verified Bare Ranch crew photo');
+    assert.match(html,/Certified arborist leadership/);
+    assert.match(html,/workers’ compensation/);
+    assert.match(html,/Schedule a consultation/);
+    assert(!html.includes('class="closing green"'),'Do not repeat the CTA on About page');
+  }
   assert.match(html,config.production?/content="index,follow"/:/noindex,nofollow/);
   const title=html.match(/<title>(.*?)<\/title>/)[1]; assert(!titles.has(title)); titles.add(title);
   const description=html.match(/<meta name="description" content="([^"]+)"/)[1]; assert(!descriptions.has(description)); descriptions.add(description);
