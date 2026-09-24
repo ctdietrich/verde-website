@@ -28,10 +28,10 @@ for(const {path} of routes){
   assert.match(html, /class="call-bar"[\s\S]*?href="tel:\+17373009848"/, `${path}: missing top click-to-call link`);
   if(path==='/contact/') {
     assert(!html.includes('Good work starts'));
-    assert.match(html,/class="contact-phone" href="tel:\\+17373009848"/);
-    const form=html.match(/<form\\b[\\s\\S]*?<\\/form>/)?.[0];
+    assert.match(html,/class="contact-phone" href="tel:\+17373009848"/);
+    const form=html.match(/<form\b[\s\S]*?<\/form>/)?.[0];
     assert(form,'Contact form must render');
-    assert.equal((form.match(/\\srequired(?=\\s|>)/g)||[]).length,3,'Only name, email, and phone should be required');
+    assert.equal((form.match(/\srequired(?=\s|>)/g)||[]).length,3,'Only name, email, and phone should be required');
     for(const field of ['Name','email','Phone']) assert(form.includes('name="'+field+'"'), 'Missing contact field: '+field);
     assert(!form.includes('name="Property address"'),'Property address must not block a lead');
     assert(!form.includes('name="ZIP code"'),'ZIP code must not block a lead');
