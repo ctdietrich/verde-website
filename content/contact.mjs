@@ -6,9 +6,11 @@ export const contactPage = `<section class="wrap contact-section">
 <input type="hidden" name="_subject" value="New Verde website project inquiry"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 <label>Your name *<input name="Name" autocomplete="name" required maxlength="120" placeholder="First and last name"></label>
 <div class="form-pair"><label>Email *<input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></label><label>Phone *<input type="tel" name="Phone" autocomplete="tel" required maxlength="40" placeholder="(512) 555-0123"></label></div>
-<label>Project type <span>(optional)</span><select name="Project type"><option value="">What are you planning?</option><option>Residential landscape or hardscape</option><option>Commercial landscape or hardscape</option><option>Ranch / other property</option><option>Not sure yet</option></select></label>
-<label>Project city or area <span>(optional)</span><input name="Project location" autocomplete="address-level2" maxlength="120" placeholder="e.g. Austin, Lakeway, San Antonio"></label>
-<label>A little about your project <span>(optional)</span><textarea name="Project details" rows="4" maxlength="5000" placeholder="What would you like to build or improve? A sentence or two is plenty."></textarea></label>
+<details class="project-optional"><summary>Add project details <span>(optional)</span></summary><div class="project-optional-fields">
+<label>Project type<select name="Project type"><option value="">What are you planning?</option><option>Residential landscape or hardscape</option><option>Commercial landscape or hardscape</option><option>Ranch / other property</option><option>Not sure yet</option></select></label>
+<label>Project city or area<input name="Project location" autocomplete="address-level2" maxlength="120" placeholder="e.g. Austin, Lakeway, San Antonio"></label>
+<label>A little about your project<textarea name="Project details" rows="4" maxlength="5000" placeholder="What would you like to build or improve? A sentence or two is plenty."></textarea></label>
+</div></details>
 <p class="form-note">By submitting, you’re asking Verde to contact you about your inquiry. FormSubmit processes the form to deliver your message to our team.</p>
 <button class="button" type="submit">Let’s discuss your project <span aria-hidden="true">↗</span></button>
 </form></div></div></section>`;
