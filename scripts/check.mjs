@@ -26,6 +26,14 @@ for(const {path} of routes){
   const html=await readFile('dist'+path+'index.html','utf8');
   assert.equal((html.match(/<h1>/g)||[]).length,1,path);
   assert.match(html, /class="call-bar"[\s\S]*?href="tel:\+17373009848"/, `${path}: missing top click-to-call link`);
+  if(path==='/') {
+    assert.match(html,/Landscape &amp; hardscape construction for Central Texas properties\./,'Homepage hero must name the trade and service region');
+    assert.match(html,/custom homes and post-pool renovations/,'Homepage hero must describe Verde’s actual project types');
+    assert.match(html,/class="hero-phone" href="tel:\+17373009848"/,'Homepage needs a direct call action');
+    assert.match(html,/data-photo-id="9"/,'Homepage hero must use a real Providence Estates project photo');
+    assert.match(html,/Real Verde project · Providence Estates Townhomes, San Antonio/,'Project photo must be captioned accurately');
+    assert.match(html,/href="\/contact\/"/,'Homepage needs a direct inquiry path');
+  }
   if(path==='/contact/') {
     assert(!html.includes('Good work starts'));
     assert.match(html,/class="contact-phone" href="tel:\+17373009848"/);
