@@ -38,8 +38,10 @@ for(const {path} of routes){
     assert(form.includes('https://formsubmit.co/hello&#64;verdelandscapes&#46;com'),'FormSubmit delivery must remain intact');
   }
   if(path==='/about/') {
-    assert.match(html,/class="about-team-photo"/,'About page must show real crew');
-    assert.match(html,/data-photo-id="21"/,'About page must show verified Bare Ranch crew photo');
+    assert.match(html,/class="about-team-photo"/,'About page must include its original project photo');
+    assert.match(html,/data-photo-id="5"/,'About page must show original Providence Estates photo');
+    assert(!html.includes('data-photo-id="21"'),'Do not duplicate Bare Ranch crew photo on About page');
+    assert.match(html,/data-photo-id="9"/,'Selected-work card must use a different Providence Estates photo');
     assert.match(html,/Certified arborist leadership/);
     assert.match(html,/workers’ compensation/);
     assert.match(html,/Schedule a consultation/);
