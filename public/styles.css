@@ -96,8 +96,8 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
 .about-team{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);gap:clamp(30px,5vw,86px);align-items:start}
 .about-team-copy h2{max-width:570px}
 .about-team-copy p{font-size:16px}
-.about-team-photo{margin:0;min-width:0}
-.about-team-photo img{width:100%;height:auto;display:block;object-fit:contain}
+.about-team-photo{margin:0;min-width:0;width:100%;max-width:640px;justify-self:end;align-self:center}
+.about-team-photo img{display:block;width:100%;height:auto;max-height:460px;aspect-ratio:1600/1067;object-fit:contain;object-position:center}
 .about-team-photo figcaption{font-size:13px;line-height:1.5;margin-top:14px}
 .about-difference h2{max-width:800px}
 .about-difference .about-expertise{gap:32px}
@@ -126,7 +126,7 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
 .about-cta p:not(.eyebrow){font-size:18px;max-width:680px}
 .about-cta .actions{gap:18px 28px}
 .about-cta .actions a:not(.button){color:inherit;display:inline-flex;align-items:center;min-height:48px;font-size:15px}
-@media(max-width:900px){.about-team{grid-template-columns:1fr;gap:32px}.about-team-photo{max-width:650px}.about-proof{gap:15px}}
+@media(max-width:900px){.about-team{grid-template-columns:1fr;gap:32px}.about-team-photo{max-width:650px;justify-self:start;align-self:start}.about-proof{gap:15px}}
 @media(max-width:650px){.about-hero{padding:48px 0 46px}.about-hero-line{margin:22px 0}.about-proof{grid-template-columns:1fr;gap:18px}.about-proof>div{border-right:0;border-bottom:1px solid #133d2529;padding:0 0 18px}.about-proof>div:last-child{border-bottom:0;padding-bottom:0}.about-audience-grid,.about-steps,.about-work-grid{grid-template-columns:1fr;gap:26px}.about-team{padding-top:56px}.about-steps{margin-top:30px}.about-audiences>h2{margin-bottom:28px}.about-cta .actions{align-items:stretch;flex-direction:column}.about-cta .actions .button{width:100%}.about-work .section-top{margin-bottom:28px}}
 
 
