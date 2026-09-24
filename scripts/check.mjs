@@ -53,6 +53,11 @@ for(const {path} of routes){
     assert.match(html,/Certified arborist leadership/);
     assert.match(html,/workers’ compensation/);
     assert.match(html,/Schedule a consultation/);
+    assert.match(html,/Landscape &amp; hardscape construction shaped by Central Texas/);
+    assert.match(html,/Capability for the complex/);
+    assert.match(html,/230 yards of river rock/);
+    assert.match(html,/commercial liability coverage/);
+    assert(!html.includes('Ongoing maintenance is available, but it isn’t the focus of our business'),'Negative positioning must stay off the About page');
     assert(!html.includes('class="closing green"'),'Do not repeat the CTA on About page');
   }
   assert.match(html,config.production?/content="index,follow"/:/noindex,nofollow/);
