@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 20
       - name: Build exact site output
-        run: npm run build
+        run: SITE_MODE=production APPROVE_INDEXING=true npm run build
       - name: Capture exact desktop previews
         run: |
           python3 -m http.server 4173 -d dist >/tmp/verde-http.log 2>&1 &
