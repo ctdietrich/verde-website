@@ -15,7 +15,7 @@ assert.deepEqual(new Set(localGuides.map(g=>g.city)),new Set(cities),'Every appr
 for(const city of cities)for(const service of services)assert(routes.some(r=>r.path===`/${slug(city)}/${slug(service)}/`),`Missing ${service} in ${city}`);
 const stylesText=await readFile('dist/styles.css','utf8');
 assert(stylesText.includes('grid-template-columns:minmax(0,.82fr) minmax(520px,1.18fr)'), 'Contact desktop layout must remain two-column');
-assert(stylesText.includes('height:clamp(320px,calc(100svh - 340px),440px)'), 'Homepage project image must remain visible above the desktop fold');
+assert(stylesText.includes('height:360px') && stylesText.includes('max-height:360px'), 'Homepage project image must remain compact above the desktop fold');
 assert(stylesText.includes('.header nav{font-size:1.25rem'), 'Desktop navigation must remain clearly readable');
 assert(stylesText.includes('.footer{font-size:1.1875rem'), 'Footer typography must remain clearly readable');
 assert(stylesText.includes('.button{font-size:1.125rem'), 'Major CTA text must remain readable');
@@ -34,7 +34,7 @@ for(const {path} of routes){
   assert.match(html, /class="call-bar"[\s\S]*?href="tel:\+17373009848"/, `${path}: missing top click-to-call link`);
   assert(!html.includes('Design preview · Website in development'), `${path}: development preview banner must not appear in production pages`);
   if(path==='/') {
-    assert.match(html,/Landscape &amp; hardscape construction for Central Texas properties\./,'Homepage hero must name the trade and service region');
+    assert.match(html,/Landscape &amp; hardscape<br>construction for Central Texas<br>properties\./,'Homepage headline must use the approved compact three-line structure');
     assert.match(html,/class="hero home-hero"/,'Homepage must use the fold-safe scoped hero layout');
     assert.match(html,/high-end residential and commercial landscapes/,'Homepage hero must describe Verde’s actual market and project scope');
     assert.match(html,/class="hero-phone" href="tel:\+17373009848"/,'Homepage needs a direct call action');
@@ -55,6 +55,7 @@ for(const {path} of routes){
     assert(!form.includes('name="Project location"'),'Project city or area should not appear');
     assert(html.includes('Just a bit of information. We’ll take it from there.'),'Lead-form intro must use the approved wording');
     assert.match(html,/class="contact-layout"[\s\S]*?class="contact-left"[\s\S]*?class="inquiry-panel"/,'Contact page must keep information on the left and form on the right');
+    assert(html.indexOf('class="contact-phone"') < html.indexOf('class="contact-intro-copy"'),'Phone must precede intro copy so phone and email stay above the fold');
     assert(form.includes('https://formsubmit.co/hello&#64;verdelandscapes&#46;com'),'FormSubmit delivery must remain intact');
   }
   if(path==='/about/') {
