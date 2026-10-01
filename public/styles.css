@@ -147,22 +147,24 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
 @media(max-width:600px){.hero-actions{align-items:stretch;flex-direction:column;gap:10px}.hero-actions .button{width:100%;min-height:52px}.hero-actions .hero-phone{width:100%;min-height:52px;justify-content:center;border:1px solid #133d25;text-decoration:none}.hero-actions .hero-work-link{align-self:flex-start}.hero figure{margin-top:27px}}
 
 
-/* Header and footer readability: larger type and touch-friendly navigation. */
-.header nav{font-size:18px;line-height:1.5}
-.header nav .button{font-size:17px}
-.call-bar-inner>span{font-size:16px}
-.call-bar a{font-size:20px}
-.call-bar a>span{font-size:16px}
-.footer{font-size:18px;line-height:1.7}
-.footer p,.footer a{font-size:18px}
+/* Header and footer readability: intentionally larger, high-contrast navigation type. */
+.header nav{font-size:20px;line-height:1.5}
+.header nav .button{font-size:18px}
+.call-bar-inner>span{font-size:17px}
+.call-bar a{font-size:22px}
+.call-bar a>span{font-size:17px}
+.footer{font-size:20px;line-height:1.7}
+.footer p,.footer a{font-size:20px}
 @media(max-width:800px){
-  .header nav{font-size:17px}
-  .call-bar a{font-size:21px}
-  .call-bar a>span{font-size:16px}
+  .header nav{font-size:18px;line-height:1.5}
+  .header nav .button{font-size:17px}
+  .call-bar a{font-size:22px}
+  .call-bar a>span{font-size:17px}
+  .footer,.footer p,.footer a{font-size:19px}
 }
 @media(max-width:600px){
-  .header nav{font-size:15px}
-  .footer{font-size:18px}
+  .header nav{font-size:18px}
+  .footer,.footer p,.footer a{font-size:19px}
 }
 
 /* Contact lead form: five required fields with address-search guidance. */
