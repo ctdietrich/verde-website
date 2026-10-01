@@ -361,3 +361,15 @@ summary{font-size:17px;line-height:1.45}
 .about-proof span,.about-team-photo figcaption,.about-step-number,.about-work-card small{font-size:14px}
 .inquiry-form .field-help,.inquiry-form .form-note{font-size:13px}
 @media(max-width:800px){.proof{font-size:13px}}
+
+
+/* Avoid a squeezed two-column contact layout on smaller laptops/tablets. */
+@media(max-width:940px) and (min-width:801px){
+  .contact-section{
+    grid-template-columns:1fr;
+    grid-template-areas:"heading" "form" "details";
+    max-width:760px;
+    gap:24px;
+  }
+  .contact-heading{max-width:700px}
+}
