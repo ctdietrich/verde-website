@@ -34,7 +34,7 @@ for(const {path} of routes){
   assert.match(html, /class="call-bar"[\s\S]*?href="tel:\+17373009848"/, `${path}: missing top click-to-call link`);
   assert(!html.includes('Design preview · Website in development'), `${path}: development preview banner must not appear in production pages`);
   if(path==='/') {
-    assert.match(html,/Landscape &amp; hardscape<br>construction for Central Texas<br>properties\./,'Homepage headline must use the approved compact three-line structure');
+    assert.match(html,/Landscape &amp; hardscape <br>construction for Central Texas <br>properties\./,'Homepage headline must preserve word spacing when line breaks are hidden on mobile');
     assert.match(html,/class="hero home-hero"/,'Homepage must use the fold-safe scoped hero layout');
     assert.match(html,/high-end residential and commercial landscapes/,'Homepage hero must describe Verde’s actual market and project scope');
     assert.match(html,/class="hero-phone" href="tel:\+17373009848"/,'Homepage needs a direct call action');
