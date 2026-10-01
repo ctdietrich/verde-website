@@ -14,7 +14,7 @@ assert.equal(routes.length,179,'All approved pages must be built');
 assert.deepEqual(new Set(localGuides.map(g=>g.city)),new Set(cities),'Every approved city needs its own guide');
 for(const city of cities)for(const service of services)assert(routes.some(r=>r.path===`/${slug(city)}/${slug(service)}/`),`Missing ${service} in ${city}`);
 const stylesText=await readFile('dist/styles.css','utf8');
-assert(stylesText.includes('grid-template-areas:"heading form"'), 'Desktop contact form must share the top row with contact heading');
+assert(stylesText.includes('grid-template-areas:') && stylesText.includes('"heading form"') && stylesText.includes('"details form"'), 'Desktop contact form must share the top row with contact heading');
 assert(stylesText.includes('height:clamp(340px,48vh,500px)'), 'Homepage hero photography must be capped to remain above the fold');
 assert(stylesText.includes('.header nav{gap:24px;font-size:19px'), 'Primary navigation must remain legible');
 assert(stylesText.includes('.footer{padding:46px 0;font-size:20px'), 'Footer typography must remain legible');
