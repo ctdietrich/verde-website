@@ -14,11 +14,11 @@ assert.equal(routes.length,179,'All approved pages must be built');
 assert.deepEqual(new Set(localGuides.map(g=>g.city)),new Set(cities),'Every approved city needs its own guide');
 for(const city of cities)for(const service of services)assert(routes.some(r=>r.path===`/${slug(city)}/${slug(service)}/`),`Missing ${service} in ${city}`);
 const stylesText=await readFile('dist/styles.css','utf8');
-assert(stylesText.includes('grid-template-columns:minmax(0,.82fr) minmax(520px,1.18fr)'), 'Contact desktop layout must remain two-column');
-assert(stylesText.includes('height:360px') && stylesText.includes('max-height:360px'), 'Homepage project image must remain compact above the desktop fold');
-assert(stylesText.includes('.header nav{font-size:1.25rem'), 'Desktop navigation must remain clearly readable');
-assert(stylesText.includes('.footer{font-size:1.1875rem'), 'Footer typography must remain clearly readable');
-assert(stylesText.includes('.button{font-size:1.125rem'), 'Major CTA text must remain readable');
+assert(stylesText.includes('grid-template-columns:minmax(0,.8fr) minmax(540px,1.2fr)'), 'Contact desktop layout must remain two-column');
+assert(stylesText.includes('height:460px') && stylesText.includes('max-height:460px'), 'Homepage project image must remain balanced above the desktop fold');
+assert(stylesText.includes('.header nav{font-size:16px'), 'Desktop navigation must remain clearly readable');
+assert(stylesText.includes('.footer{font-size:16px'), 'Footer typography must remain clearly readable');
+assert(stylesText.includes('.button{font-size:16px'), 'Major CTA text must remain readable');
 const buildInfo=JSON.parse(await readFile('dist/build-info.json'));
 assert.equal(buildInfo.pageCount,routes.length);
 assert.equal(new Set(routes.map(r=>r.path)).size,routes.length);
@@ -58,10 +58,15 @@ for(const {path} of routes){
     assert(html.indexOf('class="contact-phone"') < html.indexOf('class="contact-intro-copy"'),'Phone must precede intro copy so phone and email stay above the fold');
     assert(form.includes('https://formsubmit.co/hello&#64;verdelandscapes&#46;com'),'FormSubmit delivery must remain intact');
   }
+  if(path==='/case-studies/bare-ranch/') {
+    for(const id of ['42','43']) assert(html.includes(`data-photo-id="${id}"`), `Bare Ranch missing approved gallery photo ${id}`);
+    assert(!html.includes('data-photo-id="23"'),'Old Bare Ranch trail photo must be replaced');
+  }
   if(path==='/about/') {
-    assert.match(html,/class="about-team-photo"/,'About page must include its original project photo');
-    assert.match(html,/data-photo-id="5"/,'About page must show original Providence Estates photo');
-    assert(!html.includes('data-photo-id="21"'),'Do not duplicate Bare Ranch crew photo on About page');
+    assert.match(html,/class="about-hero-photo"/,'About page must include the approved top-right hero photo');
+    assert.match(html,/data-photo-id="44"/,'About hero must use the approved Bare Ranch vehicle photo');
+    assert.match(html,/class="about-team-photo"/,'About page must include a team photo beside Who we are');
+    assert.match(html,/data-photo-id="45"/,'Who we are section must use the approved Verde team photo');
     assert.match(html,/data-photo-id="9"/,'Selected-work card must use a different Providence Estates photo');
     assert.match(html,/Certified arborist leadership/);
     assert.match(html,/workers’ compensation/);
@@ -78,7 +83,7 @@ for(const {path} of routes){
   const description=html.match(/<meta name="description" content="([^"]+)"/)[1]; assert(!descriptions.has(description)); descriptions.add(description);
   for(const [,json]of html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)) assert(JSON.parse(json)['@graph'].length>=3);
   for(const [,url]of html.matchAll(/(?:href|src)="(\/[^"]*)"/g)){
-    const target='dist'+url.split('#')[0];await stat(target.endsWith('/')?target+'index.html':target);
+    const target='dist'+url.split(/[?#]/)[0];await stat(target.endsWith('/')?target+'index.html':target);
     if(url.endsWith('.webp')) imagePaths.add(target);
   }
   for(const [,candidates] of html.matchAll(/srcset="([^"]+)"/g)) for(const candidate of candidates.split(',')){
