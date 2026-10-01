@@ -68,6 +68,10 @@ for(const {path} of routes){
     assert.match(html,/class="about-team-photo"/,'About page must include a team photo beside Who we are');
     assert.match(html,/data-photo-id="45"/,'Who we are section must use the approved Verde team photo');
     assert.match(html,/data-photo-id="9"/,'Selected-work card must use a different Providence Estates photo');
+    assert.match(html,/Certified Expertise/);
+    assert.match(html,/Licensed Irrigators and Arborists on staff/);
+    assert.match(html,/Fully Insured/);
+    assert.match(html,/Commercial Liability and all insurance coverages to meet requirements/);
     assert.match(html,/Certified arborist leadership/);
     assert.match(html,/workers’ compensation/);
     assert.match(html,/Schedule a consultation/);
