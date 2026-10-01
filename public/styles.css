@@ -350,3 +350,14 @@ summary{font-size:17px;line-height:1.45}
 @media(max-width:800px){
   .footer-meta{flex-direction:column;margin-top:24px;gap:6px}
 }
+
+
+/* Micro-UX cleanup after full-site audit */
+.card img{height:auto;aspect-ratio:16/10;object-fit:cover}
+.service .number{font-size:14px}
+.contact-method span{font-size:13px}
+.contact-details h2.eyebrow{font-size:13px}
+.photo-expand{font-size:13px}
+.about-proof span,.about-team-photo figcaption,.about-step-number,.about-work-card small{font-size:14px}
+.inquiry-form .field-help,.inquiry-form .form-note{font-size:13px}
+@media(max-width:800px){.proof{font-size:13px}}
