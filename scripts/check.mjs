@@ -26,6 +26,7 @@ for(const {path} of routes){
   const html=await readFile('dist'+path+'index.html','utf8');
   assert.equal((html.match(/<h1>/g)||[]).length,1,path);
   assert.match(html, /class="call-bar"[\s\S]*?href="tel:\+17373009848"/, `${path}: missing top click-to-call link`);
+  assert(!html.includes('Design preview · Website in development'), `${path}: development preview banner must not appear in production pages`);
   if(path==='/') {
     assert.match(html,/Landscape &amp; hardscape construction for Central Texas properties\./,'Homepage hero must name the trade and service region');
     assert.match(html,/custom homes and post-pool renovations/,'Homepage hero must describe Verde’s actual project types');
