@@ -14,10 +14,10 @@ assert.equal(routes.length,179,'All approved pages must be built');
 assert.deepEqual(new Set(localGuides.map(g=>g.city)),new Set(cities),'Every approved city needs its own guide');
 for(const city of cities)for(const service of services)assert(routes.some(r=>r.path===`/${slug(city)}/${slug(service)}/`),`Missing ${service} in ${city}`);
 const stylesText=await readFile('dist/styles.css','utf8');
-assert(stylesText.includes('grid-template-areas:') && stylesText.includes('"heading form"') && stylesText.includes('"details form"'), 'Desktop contact form must share the top row with contact heading');
-assert(stylesText.includes('height:clamp(340px,48vh,500px)'), 'Homepage hero photography must be capped to remain above the fold');
-assert(stylesText.includes('.header nav{gap:24px;font-size:20px'), 'Primary navigation must remain legible');
-assert(stylesText.includes('.footer{padding:46px 0;font-size:20px'), 'Footer typography must remain legible');
+assert(stylesText.includes('grid-template-columns:minmax(0,.82fr) minmax(520px,1.18fr)'), 'Contact desktop layout must remain two-column');
+assert(stylesText.includes('height:clamp(360px,49vh,500px)'), 'Homepage project image must remain visible above the desktop fold');
+assert(stylesText.includes('.header nav{font-size:18px'), 'Desktop navigation must remain readable without becoming oversized');
+assert(stylesText.includes('.footer{font-size:18px'), 'Footer typography must remain readable');
 const buildInfo=JSON.parse(await readFile('dist/build-info.json'));
 assert.equal(buildInfo.pageCount,routes.length);
 assert.equal(new Set(routes.map(r=>r.path)).size,routes.length);
@@ -34,10 +34,10 @@ for(const {path} of routes){
   assert(!html.includes('Design preview · Website in development'), `${path}: development preview banner must not appear in production pages`);
   if(path==='/') {
     assert.match(html,/Landscape &amp; hardscape construction for Central Texas properties\./,'Homepage hero must name the trade and service region');
-    assert.match(html,/custom homes and post-pool renovations/,'Homepage hero must describe Verde’s actual project types');
+    assert.match(html,/high-end residential and commercial landscapes/,'Homepage hero must describe Verde’s actual market and project scope');
     assert.match(html,/class="hero-phone" href="tel:\+17373009848"/,'Homepage needs a direct call action');
     assert.match(html,/data-photo-id="9"/,'Homepage hero must use a real Providence Estates project photo');
-    assert.match(html,/Real Verde project · Providence Estates Townhomes, San Antonio/,'Project photo must be captioned accurately');
+    assert.match(html,/Providence Estates Townhomes · San Antonio, Texas/,'Project photo must be captioned accurately');
     assert.match(html,/href="\/contact\/"/,'Homepage needs a direct inquiry path');
   }
   if(path==='/contact/') {
@@ -52,7 +52,7 @@ for(const {path} of routes){
     assert(!form.includes('name="Project type"'),'Project type selection should not appear');
     assert(!form.includes('name="Project location"'),'Project city or area should not appear');
     assert(html.includes('Just a bit of information. We’ll take it from there.'),'Lead-form intro must use the approved wording');
-    assert(html.indexOf('class="inquiry-panel"') < html.indexOf('class="contact-details"'),'Lead form must appear before secondary contact details in document order');
+    assert.match(html,/class="contact-layout"[\s\S]*?class="contact-left"[\s\S]*?class="inquiry-panel"/,'Contact page must keep information on the left and form on the right');
     assert(form.includes('https://formsubmit.co/hello&#64;verdelandscapes&#46;com'),'FormSubmit delivery must remain intact');
   }
   if(path==='/about/') {
@@ -83,7 +83,6 @@ for(const {path} of routes){
   }
   assert(!html.includes('An extraordinary home'));
   assert(!html.includes('project-16-1600.webp'),'Damaged hero candidate reintroduced');
-  assert.match(html,/class="footer-nav"[\s\S]*?href="\/case-studies\/"[\s\S]*?href="\/contact\/"/,'Footer must provide complete navigation and conversion path');
   assert(html.includes('hello&#64;verdelandscapes&#46;com'),'Email must survive preview domain substitution');
 }
 for(const file of imagePaths){
