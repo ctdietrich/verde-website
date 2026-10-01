@@ -7,7 +7,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  build-compatibility:
+    name: Build on Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Run host-compatible production build
+        run: npm run build
+
   screenshot:
+    needs: build-compatibility
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,7 +30,7 @@ jobs:
         with:
           node-version: 20
       - name: Build exact site output
-        run: SITE_MODE=production APPROVE_INDEXING=true npm run build
+        run: npm run build
       - name: Capture exact desktop previews
         run: |
           python3 -m http.server 4173 -d dist >/tmp/verde-http.log 2>&1 &
