@@ -15,9 +15,10 @@ assert.deepEqual(new Set(localGuides.map(g=>g.city)),new Set(cities),'Every appr
 for(const city of cities)for(const service of services)assert(routes.some(r=>r.path===`/${slug(city)}/${slug(service)}/`),`Missing ${service} in ${city}`);
 const stylesText=await readFile('dist/styles.css','utf8');
 assert(stylesText.includes('grid-template-columns:minmax(0,.82fr) minmax(520px,1.18fr)'), 'Contact desktop layout must remain two-column');
-assert(stylesText.includes('height:clamp(360px,49vh,500px)'), 'Homepage project image must remain visible above the desktop fold');
-assert(stylesText.includes('.header nav{font-size:18px'), 'Desktop navigation must remain readable without becoming oversized');
-assert(stylesText.includes('.footer{font-size:18px'), 'Footer typography must remain readable');
+assert(stylesText.includes('height:clamp(320px,calc(100svh - 340px),440px)'), 'Homepage project image must remain visible above the desktop fold');
+assert(stylesText.includes('.header nav{font-size:1.25rem'), 'Desktop navigation must remain clearly readable');
+assert(stylesText.includes('.footer{font-size:1.1875rem'), 'Footer typography must remain clearly readable');
+assert(stylesText.includes('.button{font-size:1.125rem'), 'Major CTA text must remain readable');
 const buildInfo=JSON.parse(await readFile('dist/build-info.json'));
 assert.equal(buildInfo.pageCount,routes.length);
 assert.equal(new Set(routes.map(r=>r.path)).size,routes.length);
@@ -34,6 +35,7 @@ for(const {path} of routes){
   assert(!html.includes('Design preview · Website in development'), `${path}: development preview banner must not appear in production pages`);
   if(path==='/') {
     assert.match(html,/Landscape &amp; hardscape construction for Central Texas properties\./,'Homepage hero must name the trade and service region');
+    assert.match(html,/class="hero home-hero"/,'Homepage must use the fold-safe scoped hero layout');
     assert.match(html,/high-end residential and commercial landscapes/,'Homepage hero must describe Verde’s actual market and project scope');
     assert.match(html,/class="hero-phone" href="tel:\+17373009848"/,'Homepage needs a direct call action');
     assert.match(html,/data-photo-id="9"/,'Homepage hero must use a real Providence Estates project photo');
