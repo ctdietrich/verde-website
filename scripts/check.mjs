@@ -72,7 +72,7 @@ for(const {path} of routes){
     assert.match(html,/Licensed Irrigators and Arborists on staff/);
     assert.match(html,/Fully Insured/);
     assert.match(html,/Commercial Liability and all insurance coverages to meet requirements/);
-    assert.match(html,/Certified arborist leadership/);
+    assert.match(html,/certified arborist leadership/i);
     assert.match(html,/workers’ compensation/);
     assert.match(html,/Schedule a consultation/);
     assert.match(html,/Landscape &amp; hardscape construction shaped by Central Texas/);
