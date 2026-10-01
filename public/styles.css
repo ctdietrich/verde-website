@@ -283,3 +283,24 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
   .inquiry-panel{padding:22px 26px}
   .inquiry-form{gap:13px}
 }
+
+
+/* Contact conversion refinement: keep phone and email visible in the first desktop viewport. */
+@media(min-width:801px){
+  .contact-section{padding-top:14px}
+  .contact-heading{margin-bottom:18px}
+  .contact-heading h1{font-size:clamp(42px,4vw,58px);margin-bottom:12px}
+  .contact-heading>p:last-child{line-height:1.45;margin-bottom:0}
+  .contact-details h2.eyebrow{margin-bottom:6px}
+  .contact-phone{margin-bottom:10px}
+  .contact-method{padding:12px 0}
+  .contact-commercial{margin-top:14px;padding-top:16px}
+}
+@media(min-width:801px) and (max-height:760px){
+  .contact-section{padding-top:8px}
+  .contact-heading{margin-bottom:12px}
+  .contact-heading h1{font-size:clamp(40px,3.7vw,54px);margin-bottom:10px}
+  .contact-heading>p:last-child{font-size:17px;line-height:1.4}
+  .contact-phone{font-size:clamp(29px,2.4vw,36px)}
+  .contact-method{padding:10px 0}
+}
