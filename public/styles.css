@@ -301,8 +301,8 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
 }
 
 
-/* Review refinement: reduce oversized side gutters on desktop without stretching reading copy. */
-.wrap{width:min(1800px,92%);margin-inline:auto}
+/* Review refinement: balanced desktop gutters between the original and full-width versions. */
+.wrap{width:min(1600px,90.5%);margin-inline:auto}
 .story article,.about-lede,.contact-heading,.contact-details{max-width:65ch}
 @media(max-width:800px){
   .wrap{width:min(94%,1280px)}
