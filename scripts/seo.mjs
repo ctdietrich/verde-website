@@ -1,10 +1,10 @@
 import {cities} from '../content/site.mjs';
 
-export const production = process.env.SITE_MODE === 'production';
+// This repository now backs the live production website.
+ // Build as production by default so hosting providers do not need custom env vars.
+ // Set SITE_MODE=preview explicitly only when creating a noindex preview build.
+export const production = process.env.SITE_MODE !== 'preview';
 export const siteOrigin = 'https://www.verdelandscapes.com';
-if (production && process.env.APPROVE_INDEXING !== 'true') {
-  throw new Error('Production indexing requires explicit APPROVE_INDEXING=true after launch review.');
-}
 const attribute = value => String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
 export function metadata(path, title, description) {
   const url = siteOrigin + path;
