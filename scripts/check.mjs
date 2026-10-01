@@ -40,10 +40,13 @@ for(const {path} of routes){
     assert.match(html,/class="contact-phone" href="tel:\+17373009848"/);
     const form=html.match(/<form\b[\s\S]*?<\/form>/)?.[0];
     assert(form,'Contact form must render');
-    assert.equal((form.match(/\srequired(?=\s|>)/g)||[]).length,3,'Only name, email, and phone should be required');
-    for(const field of ['Name','email','Phone']) assert(form.includes('name="'+field+'"'), 'Missing contact field: '+field);
-    assert(!form.includes('name="Property address"'),'Property address must not block a lead');
-    assert(!form.includes('name="ZIP code"'),'ZIP code must not block a lead');
+    assert.equal((form.match(/\srequired(?=\s|>)/g)||[]).length,5,'Exactly five lead fields should be required');
+    for(const field of ['Name','email','Phone','Property address','Project details']) assert(form.includes('name="'+field+'"'), 'Missing contact field: '+field);
+    assert.match(form,/id="property-address"[\s\S]*?name="Property address"[\s\S]*?required/,'Property address must be required and autocomplete-ready');
+    assert.match(form,/name="Project details"[\s\S]*?required/,'Project details must be required');
+    assert(!form.includes('name="Project type"'),'Project type selection should not appear');
+    assert(!form.includes('name="Project location"'),'Project city or area should not appear');
+    assert(form.includes('Just a bit of information. We’ll take it from there.'),'Lead-form intro must use the approved wording');
     assert(form.includes('https://formsubmit.co/hello&#64;verdelandscapes&#46;com'),'FormSubmit delivery must remain intact');
   }
   if(path==='/about/') {
