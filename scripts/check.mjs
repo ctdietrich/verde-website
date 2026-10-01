@@ -13,6 +13,11 @@ const routes=JSON.parse(await readFile('dist/routes.json'));
 assert.equal(routes.length,179,'All approved pages must be built');
 assert.deepEqual(new Set(localGuides.map(g=>g.city)),new Set(cities),'Every approved city needs its own guide');
 for(const city of cities)for(const service of services)assert(routes.some(r=>r.path===`/${slug(city)}/${slug(service)}/`),`Missing ${service} in ${city}`);
+const stylesText=await readFile('dist/styles.css','utf8');
+assert(stylesText.includes('grid-template-areas:"heading form"'), 'Desktop contact form must share the top row with contact heading');
+assert(stylesText.includes('height:clamp(340px,48vh,500px)'), 'Homepage hero photography must be capped to remain above the fold');
+assert(stylesText.includes('.header nav{gap:24px;font-size:19px'), 'Primary navigation must remain legible');
+assert(stylesText.includes('.footer{padding:46px 0;font-size:20px'), 'Footer typography must remain legible');
 const buildInfo=JSON.parse(await readFile('dist/build-info.json'));
 assert.equal(buildInfo.pageCount,routes.length);
 assert.equal(new Set(routes.map(r=>r.path)).size,routes.length);
@@ -46,7 +51,8 @@ for(const {path} of routes){
     assert.match(form,/name="Project details"[\s\S]*?required/,'Project details must be required');
     assert(!form.includes('name="Project type"'),'Project type selection should not appear');
     assert(!form.includes('name="Project location"'),'Project city or area should not appear');
-    assert(form.includes('Just a bit of information. We’ll take it from there.'),'Lead-form intro must use the approved wording');
+    assert(html.includes('Just a bit of information. We’ll take it from there.'),'Lead-form intro must use the approved wording');
+    assert(html.indexOf('class="inquiry-panel"') < html.indexOf('class="contact-details"'),'Lead form must appear before secondary contact details in document order');
     assert(form.includes('https://formsubmit.co/hello&#64;verdelandscapes&#46;com'),'FormSubmit delivery must remain intact');
   }
   if(path==='/about/') {
