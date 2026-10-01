@@ -16,7 +16,7 @@ for(const city of cities)for(const service of services)assert(routes.some(r=>r.p
 const stylesText=await readFile('dist/styles.css','utf8');
 assert(stylesText.includes('grid-template-areas:') && stylesText.includes('"heading form"') && stylesText.includes('"details form"'), 'Desktop contact form must share the top row with contact heading');
 assert(stylesText.includes('height:clamp(340px,48vh,500px)'), 'Homepage hero photography must be capped to remain above the fold');
-assert(stylesText.includes('.header nav{gap:24px;font-size:19px'), 'Primary navigation must remain legible');
+assert(stylesText.includes('.header nav{gap:24px;font-size:20px'), 'Primary navigation must remain legible');
 assert(stylesText.includes('.footer{padding:46px 0;font-size:20px'), 'Footer typography must remain legible');
 const buildInfo=JSON.parse(await readFile('dist/build-info.json'));
 assert.equal(buildInfo.pageCount,routes.length);
@@ -83,6 +83,7 @@ for(const {path} of routes){
   }
   assert(!html.includes('An extraordinary home'));
   assert(!html.includes('project-16-1600.webp'),'Damaged hero candidate reintroduced');
+  assert.match(html,/class="footer-nav"[\s\S]*?href="\/case-studies\/"[\s\S]*?href="\/contact\/"/,'Footer must provide complete navigation and conversion path');
   assert(html.includes('hello&#64;verdelandscapes&#46;com'),'Email must survive preview domain substitution');
 }
 for(const file of imagePaths){
