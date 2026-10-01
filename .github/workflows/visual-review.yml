@@ -1,0 +1,44 @@
+name: Visual Review
+
+on:
+  push:
+    branches:
+      - ux-review-2026-10-01
+  workflow_dispatch:
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build exact site output
+        run: node scripts/build.mjs
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Capture exact desktop previews
+        run: |
+          python3 -m http.server 4173 -d dist >/tmp/verde-http.log 2>&1 &
+          cat > /tmp/capture.mjs <<'NODE'
+          import { chromium } from 'playwright';
+          const browser = await chromium.launch();
+          for (const [name,path] of [['homepage','/'],['contact','/contact/']]) {
+            const page = await browser.newPage({ viewport: { width: 2048, height: 900 }, deviceScaleFactor: 1 });
+            await page.goto('http://127.0.0.1:4173' + path, { waitUntil: 'networkidle' });
+            await page.screenshot({ path: name + '.png', fullPage: false });
+            await page.close();
+          }
+          await browser.close();
+          NODE
+          node /tmp/capture.mjs
+      - name: Upload exact previews
+        uses: actions/upload-artifact@v4
+        with:
+          name: verde-exact-previews
+          path: |
+            homepage.png
+            contact.png
