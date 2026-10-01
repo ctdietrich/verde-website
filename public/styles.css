@@ -299,3 +299,11 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
   .form-pair{grid-template-columns:1fr}
   .inquiry-panel{padding:22px 18px}
 }
+
+
+/* Review refinement: reduce oversized side gutters on desktop without stretching reading copy. */
+.wrap{width:min(1800px,92%);margin-inline:auto}
+.story article,.about-lede,.contact-heading,.contact-details{max-width:65ch}
+@media(max-width:800px){
+  .wrap{width:min(94%,1280px)}
+}
