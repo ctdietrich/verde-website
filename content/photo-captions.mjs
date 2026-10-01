@@ -23,5 +23,7 @@ export const projectPhotoCaptions = {
   "38": "A planted tree bed beside the driveway.",
   "39": "Limestone accents and mulch define a lawn planting island.",
   "40": "During construction: steel-edged planting beds along the ranch building.",
-  "41": "During construction: gathering-area seating and covered structure."
+  "41": "During construction: gathering-area seating and covered structure.",
+  "42": "During construction: trail surface work at Bare Ranch.",
+  "43": "During construction: installing the Go One More ranch entrance."
 };
