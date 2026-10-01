@@ -1,8 +1,14 @@
 export const contactPage = `<section class="wrap contact-section">
 <div class="contact-layout">
   <div class="contact-left">
-    <div class="contact-heading"><p class="eyebrow">Residential &amp; commercial · Central Texas</p><h1>Let’s talk about<br>your project.</h1><p>Tell us a little about what you’re planning. Whether you’re ready to build or just exploring options, we’d love to hear from you.</p></div>
-    <aside class="contact-details" aria-label="Contact options"><h2 class="eyebrow">Prefer to talk?</h2><a class="contact-phone" href="tel:+17373009848" aria-label="Call Verde at 737-300-9848">737-300-9848</a><div class="contact-method"><span>Email us directly</span><a href="mailto:hello&#64;verdelandscapes&#46;com">hello&#64;verdelandscapes&#46;com</a></div><div class="contact-commercial"><h3>Commercial project or bid request?</h3><p>Use the same form, or email plans and bid documents directly to our team. We’ll gather the details needed for the next step.</p></div></aside>
+    <div class="contact-heading"><p class="eyebrow">Residential &amp; commercial · Central Texas</p><h1>Let’s talk about<br>your project.</h1></div>
+    <aside class="contact-details" aria-label="Contact options">
+      <h2 class="eyebrow">Prefer to talk?</h2>
+      <a class="contact-phone" href="tel:+17373009848" aria-label="Call Verde at 737-300-9848">737-300-9848</a>
+      <div class="contact-method"><span>Email us directly</span><a href="mailto:hello&#64;verdelandscapes&#46;com">hello&#64;verdelandscapes&#46;com</a></div>
+      <p class="contact-intro-copy">Tell us a little about what you’re planning. Whether you’re ready to build or just exploring options, we’d love to hear from you.</p>
+      <div class="contact-commercial"><h3>Commercial project or bid request?</h3><p>Use the same form, or email plans and bid documents directly to our team. We’ll gather the details needed for the next step.</p></div>
+    </aside>
   </div>
 
   <div class="inquiry-panel"><h2>Start with a quick introduction.</h2><p class="form-intro">Just a bit of information. We’ll take it from there.</p>
