@@ -19,7 +19,7 @@ assert(stylesText.includes('height:460px') && stylesText.includes('max-height:46
 assert(stylesText.includes('.header nav{font-size:16px'), 'Desktop navigation must remain clearly readable');
 assert(stylesText.includes('.footer{font-size:16px'), 'Footer typography must remain clearly readable');
 assert(stylesText.includes('.button{font-size:16px'), 'Major CTA text must remain readable');
-assert(stylesText.includes('.about-team-photo img[data-photo-id="44"]') && stylesText.includes('object-position:50% 55%'), 'Lower About vehicle photo must keep the approved lower crop');
+assert(stylesText.includes('.about-team-photo img[data-photo-id="44"]') && stylesText.includes('height:clamp(500px,36vw,560px)') && stylesText.includes('object-position:50% 60%'), 'Lower About vehicle photo must keep the approved lower crop');
 
 const buildInfo=JSON.parse(await readFile('dist/build-info.json'));
 assert.equal(buildInfo.pageCount,routes.length);
