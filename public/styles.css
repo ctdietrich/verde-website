@@ -368,8 +368,12 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
   object-position:50% 43%;
 }
 .about-team-photo img[data-photo-id="44"]{
-  aspect-ratio:7/6;
-  object-position:50% 55%;
+  width:100%;
+  height:clamp(500px,36vw,560px);
+  max-height:560px;
+  aspect-ratio:auto;
+  object-fit:cover;
+  object-position:50% 60%;
 }
 .gallery-photo img[data-photo-id="42"]{object-position:50% 34%}
 .gallery-photo img[data-photo-id="43"]{object-position:50% 50%}
@@ -391,4 +395,10 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
   .about-hero h1{font-size:clamp(39px,10vw,50px)}
   .about-hero .about-lede{font-size:16px}
   .about-team-photo img{aspect-ratio:4/3}
+  .about-team-photo img[data-photo-id="44"]{
+    height:360px;
+    max-height:360px;
+    aspect-ratio:auto;
+    object-position:50% 60%;
+  }
 }
