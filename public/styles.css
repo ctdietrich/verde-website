@@ -369,7 +369,7 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
 }
 .about-team-photo img[data-photo-id="44"]{
   aspect-ratio:7/6;
-  object-position:50% 41%;
+  object-position:50% 55%;
 }
 .gallery-photo img[data-photo-id="42"]{object-position:50% 34%}
 .gallery-photo img[data-photo-id="43"]{object-position:50% 50%}
