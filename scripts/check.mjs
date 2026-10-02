@@ -64,9 +64,9 @@ for(const {path} of routes){
   }
   if(path==='/about/') {
     assert.match(html,/class="about-hero-photo"/,'About page must include the approved top-right hero photo');
-    assert.match(html,/data-photo-id="44"/,'About hero must use the approved Bare Ranch vehicle photo');
+    assert.match(html,/class="about-hero-photo"[\s\S]*?data-photo-id="45"/,'About hero must use the approved Verde team photo');
     assert.match(html,/class="about-team-photo"/,'About page must include a team photo beside Who we are');
-    assert.match(html,/data-photo-id="45"/,'Who we are section must use the approved Verde team photo');
+    assert.match(html,/class="about-team-photo"[\s\S]*?data-photo-id="44"/,'Who we are section must use the approved Bare Ranch vehicle photo');
     assert.match(html,/data-photo-id="9"/,'Selected-work card must use a different Providence Estates photo');
     assert.match(html,/Certified Expertise/);
     assert.match(html,/Licensed Irrigators and Arborists on staff/);
